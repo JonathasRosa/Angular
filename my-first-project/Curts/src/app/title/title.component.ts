@@ -14,6 +14,4 @@ export class TitleComponent implements OnInit, OnChanges, OnDestroy {
   ngOnDestroy(): void {
     console.log("Deu bom ele foi destruido!")
   }
-    
-
 }
