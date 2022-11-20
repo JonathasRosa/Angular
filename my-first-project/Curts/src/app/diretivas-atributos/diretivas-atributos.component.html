@@ -1,1 +1,23 @@
-<p>diretivas-atributos works!</p>
+<ng-content select="h1"></ng-content>
+
+<h1>Diretivas Atributo</h1>
+<div *ngIf="nome != 'Jonathas'">
+<p [ngClass]="{'active':valor, 'disable':!valor}">NgClass</p>
+<hr>
+<p [ngStyle]="{'height': height, 'background': backgroundColor}
+">ngStyle</p>
+</div>
+
+<hr>
+<input [(ngModel)]="nome">
+<button (click)="salvar()">Salvar</button>
+<p *ngFor="let item of list">{{item.nome}}</p>
+<hr>
+<ng-template ngFor let-item [ngForOf]="list">
+    <p>
+        {{item.nome}}
+    </p>
+</ng-template>
+<input [(ngModel)]="nome">
+<button (click)="salvar()">Salvar</button>
+<ng-content select="h3"></ng-content>
