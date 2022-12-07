@@ -16,7 +16,7 @@ import { SharedModule } from './shared/shared.module';
     TitleComponent,
     DataBindingComponent,
     DiretivasComponent,
-    DiretivasAtributosComponent
+    DiretivasAtributosComponent,
   ],
   imports: [
     BrowserModule,
