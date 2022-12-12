@@ -8,14 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./food-add.component.scss']
 })
 export class FoodAddComponent implements OnInit {
-
   constructor(private foodListService:FoodListService) { }
-
   ngOnInit(): void {
   }
-
   public listAddItem(value: string) {
-   return this.foodListService.foodListAdd(value)
+    return this.foodListService.foodListAdd(value);
   }
-  
 }

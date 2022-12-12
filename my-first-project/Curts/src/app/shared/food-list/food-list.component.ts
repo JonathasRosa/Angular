@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-//
+//SERVICES
 import { FoodListService } from 'src/app/services/food-list.service';
 
 @Component({
@@ -16,6 +15,9 @@ export class FoodListComponent implements OnInit {
 
   ngOnInit(): void {
     this.foodList = this.foodListService.foodList();
-  }
 
+    this.foodListService.emitEvent.subscribe(
+      res => alert(`Você adicionou =>${res}`)
+    );
+  }
 }
