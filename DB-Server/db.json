@@ -1,28 +1,5 @@
 {
-    "Sandwiches":[
-        {
-            "id": 1,
-            "nome":"X-Bacon"
-        },
-        {
-           "id": 2,
-           "nome":"X-Calabreza"
-        },
-        {
-            "id": 3,
-            "nome":"X-Frango"
-        },
-        {
-            "id": 4,
-            "nome":"X-Tudo"
-        },
-        {
-            "id": 5,
-            "nome":"X-Salada"
-        },
-        {
-            "id": 6,
-            "nome":"X-Salada + Frango"
-        }
+    "List-Food": [
+        
     ]
 }
