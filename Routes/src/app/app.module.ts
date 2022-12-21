@@ -1,3 +1,4 @@
+import { DashboardRoutingModule } from './dashboard/dashboard-routing.module';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -19,7 +20,8 @@ import { MenuComponent } from './shared/menu/menu.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DashboardRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
