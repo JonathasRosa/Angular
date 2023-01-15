@@ -8,6 +8,7 @@ import { InputComponent } from './input/input.component';
 import { OutputComponent } from './output/output.component';
 import { FoodListComponent } from './food-list/food-list.component';
 import { FoodAddComponent } from './food-add/food-add.component';
+import { BankingComponent } from './banking/banking.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FoodAddComponent } from './food-add/food-add.component';
     InputComponent,
     OutputComponent,
     FoodListComponent,
-    FoodAddComponent
+    FoodAddComponent,
+    BankingComponent
   ],
   exports: [
     NewComponentComponent,
