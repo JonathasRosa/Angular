@@ -17,9 +17,20 @@ describe('ListInvestimentsService', () => {
     {
       name: 'Banco 1',
       value: 100
+    }, {
+      name: 'Banco 2',
+      value: 100
+    }, {
+      name: 'Banco 3',
+      value: 100
+    }, {
+      name: 'Banco 4',
+      value: 100
+    }, {
+      name: 'Banco 5',
+      value: 100
     },
-  ]
-    
+  ];
     
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -32,9 +43,23 @@ describe('ListInvestimentsService', () => {
 
   afterEach(() => {
     httpTestingController.verify();
-  })
+  });
 
   it('should be created', () => {
     expect(service).toBeTruthy();
+  });
+
+  it('(U) should be list all Investiments', (done) => {
+    service.list().subscribe(
+      (res: Array<Investiments>) => {
+        expect(res[0].name).toEqual('Banco 1');
+        expect(res[0].value).toEqual(100);
+        expect(res[4].name).toEqual('Banco 5');
+        expect(res[4].value).toEqual(100);
+        done();
+      });
+    const req = httpTestingController.expectOne(URL);
+    req.flush(mockList);
+    expect(req.request.method).toEqual('GET');
   });
 });
