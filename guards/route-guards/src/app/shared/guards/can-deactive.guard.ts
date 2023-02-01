@@ -7,7 +7,7 @@ import {
 } from '@angular/router';
 import { Observable } from 'rxjs';
 //Components
-import { AccountComponent } from './../account/account.component';
+import { AccountComponent } from '../pages/account/account.component';
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +19,9 @@ export class CanDeactiveGuard implements CanDeactivate<AccountComponent> {
     currentState: RouterStateSnapshot,
     nextState?: RouterStateSnapshot
   ): boolean | UrlTree | Observable<boolean | UrlTree> | Promise<boolean | UrlTree> | boolean {
+    console.log(currentRoute);
+    console.log(currentState);
+    console.log(nextState);
     return component.exit();
   }  
 }
